@@ -1,0 +1,122 @@
+<!-- This tells the browser that this document uses the HTML5 standard -->
+<!DOCTYPE html>
+<!-- The html tag is the root of the tree, and lang="en" tells the browser the content is in English -->
+<html lang="en">
+  
+<!-- The head contains metadata. None of this is visible on the main page, but the browser needs it -->
+<head>
+    <meta charset="UTF-8">
+    <!-- This is the title that will show up in the web browser's top tab -->
+    <title>Lexus SC400 Project Tracker</title>
+    
+    <!-- This style block adds simple CSS to make the page look cleaner -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        form {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<!-- The body contains all the visible content that the user will interact with -->
+<body>
+
+    <!-- This is the main title of the webpage -->
+    <h1>The Accursed Lexus Project</h1>
+
+    <!-- These paragraphs describe the current state of the project car -->
+    <p>Welcome to the official build tracker for my early 2000s Lexus. Getting this car to run smoothly has been a test of patience, requiring a mix of mechanical troubleshooting and custom electrical fabrication.</p>
+    
+    <p>Currently, the car is finally sitting right on its new suspension, and the interior electronics are coming together. There is still a lot of work to do before it is a reliable daily driver, but the major hurdles are behind me.</p>
+
+    <!-- This is a secondary, smaller heading -->
+    <h2>Recent Milestones</h2>
+
+    <!-- This is an unordered (bulleted) list tracking the work completed -->
+    <ul>
+        <li>Dialed in the threaded MacPherson strut coilover installation.</li>
+        <li>Prototyped and soldered the custom ESP32-powered welcome chime.</li>
+        <li>Successfully pulled the event data recorder crash files for diagnostics.</li>
+    </ul>
+
+    <!-- This image tag displays a picture. The alt attribute describes it for screen readers or if the image fails to load -->
+    <!-- Note: Make sure to place a real image inside an "images" folder, or replace this with a web URL -->
+    <img src="images/lexus_bay.jpg" alt="The engine bay of a 2000s Lexus during a wiring overhaul" width="100%">
+
+    <h2>Parts Inventory & Status</h2>
+
+    <!-- This table organizes data into rows and columns -->
+    <table>
+        <!-- This is the table header row -->
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Status</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <!-- This is the table body containing the data rows -->
+        <tbody>
+            <tr>
+                <td>Threaded Coilovers</td>
+                <td>Installed</td>
+                <td>Torque specs verified on all four corners.</td>
+            </tr>
+            <tr>
+                <td>DFPlayer Audio Module</td>
+                <td>Wired</td>
+                <td>Interfaced with the ESP32 and step-down converter.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Helpful Resources</h2>
+    
+    <!-- This is a link to an external website -->
+    <p>For VIN lookups and official registry data, I use the <a href="https://vpic.nhtsa.dot.gov/api/">NHTSA Public API</a>.</p>
+
+    <h2>Log a New Task</h2>
+
+    <!-- This form allows users to submit data. It has two inputs and a submit button -->
+    <form action="#" method="POST">
+        <label for="taskName">Task Name:</label><br>
+        <!-- A standard text input -->
+        <input type="text" id="taskName" name="taskName" placeholder="e.g., Check alternator"><br>
+        
+        <label for="priority">Priority Level:</label><br>
+        <!-- A second input, using a number type -->
+        <input type="number" id="priority" name="priority" min="1" max="5" placeholder="1 to 5"><br>
+        
+        <!-- The button that submits the form -->
+        <button type="submit">Add to Project Log</button>
+    </form>
+
+</body>
+</html>
